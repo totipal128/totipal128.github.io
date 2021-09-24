@@ -1,7 +1,147 @@
-.jumbotron {
-  padding-top: 10rem;
-  background-color: #d1e0f9;
+/* $tablet: 768px;
+leptop :1024px;
+$phone: 480px; */
+
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Clarendon Lt BT", sans-serif;
 }
-section {
-  padding-top: 5rem;
+
+.container {
+  max-width: 1080px;
+  margin: 20px auto;
+  background: #fff;
+  overflow: hidden;
+}
+
+.sidebar-mobile {
+  display: none;
+}
+.sidebar {
+  margin: 0px 0px;
+  padding: 5px;
+  position: fixed;
+  width: 300px;
+  height: 700px;
+  display: block;
+}
+
+.sidebar-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.sidebar-header img {
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: 2px solid #fff;
+}
+.sidebar-menu li {
+  margin-left: 2rem;
+  margin-bottom: 1.5rem;
+  padding-top: 1rem;
+  height: 50px;
+  width: 230px;
+  border-radius: 20%;
+  background-color: #fff;
+  text-align: center;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.sidebar-menu li:hover {
+  background-color: aqua;
+}
+
+.sidebar-menu li.active {
+  background-color: aqua;
+}
+
+.header {
+  margin-left: 265px;
+}
+.name {
+  position: absolute;
+  font-size: 40px;
+  padding: 3rem 2rem;
+  width: 500px;
+}
+.sidebar-body {
+  padding: 30px 30px;
+}
+
+.profil {
+  margin: 1.5rem;
+  margin-bottom: 3.5rem;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 10px;
+  border-radius: 10%;
+  min-width: 250px;
+}
+
+.profil h2 {
+  text-align: center;
+  margin-top: -25px;
+  margin-bottom: 1rem;
+}
+.profil span {
+  margin-left: 25px;
+}
+
+.sidebar-header-mobile {
+  display: none;
+}
+
+@media screen and(max-width:768px) {
+  .sidebar {
+    width: 200px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .sidebar {
+    visibility: hidden;
+  }
+  .header {
+    margin-left: 0px;
+    position: relative;
+  }
+  .sidebar-mobile {
+    display: inline-block;
+    position: absolute;
+    margin: 560px 294px;
+    height: 100%;
+  }
+  .sidebar-mobile .btn-mobile {
+    position: fixed;
+    background-color: chartreuse;
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+    z-index: 9999;
+  }
+  .menu-mobile {
+    position: fixed;
+    margin: 270px 0px;
+    width: 50px;
+    z-index: 999;
+    animation: ease 2s;
+  }
+  .menu-mobile li {
+    margin-bottom: 1rem;
+  }
+  .menu-mobile li img {
+    width: 50px;
+    height: 50px;
+  }
+  #check {
+    display: none;
+  }
+  .button:checked ~ .menu-mobile {
+    margin: -290px 0px;
+  }
+  .sidebar-header-mobile {
+    display: block;
+    text-align: center;
+  }
 }
