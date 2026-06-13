@@ -36,108 +36,48 @@
     />
   </head>
   <body>
-    <!-- Sidebar Desktop -->
-    <nav class="sidebar" id="sidebar">
-      <div class="sidebar-header">
-        <div class="avatar">
-          <img src="img/totipal.png" alt="Ismail Totipal" />
-          <div class="avatar-status"></div>
-        </div>
-        <h1>Ismail Totipal</h1>
-        <p class="title-dev">Developer</p>
-      </div>
-      <ul class="nav-links">
-        <li>
-          <a href="#hero" class="active"
-            ><i class="fas fa-home"></i><span>Beranda</span></a
-          >
-        </li>
-        <!-- <li>
-          <a href="#profil"
-            ><i class="fas fa-user"></i><span>Profil</span></a
-          >
-        </li>
-        <li>
-          <a href="#riwayat"
-            ><i class="fas fa-graduation-cap"></i><span>Pendidikan</span></a
-          >
-        </li>
-        <li>
-          <a href="#org"
-            ><i class="fas fa-users"></i><span>Organisasi</span></a
-          >
-        </li> -->
-        <li>
-          <a href="#skills"
-            ><i class="fas fa-code"></i><span>Skills</span></a
-          >
-        </li>
-        <li>
-          <a href="#projects"
-            ><i class="fas fa-folder-open"></i><span>Proyek</span></a
-          >
-        </li>
-        <li>
-          <a href="#certifications"
-            ><i class="fas fa-certificate"></i><span>Sertifikasi</span></a
-          >
-        </li>
-      </ul>
-
-      <!-- Theme Toggle -->
-      <div class="theme-toggle-wrapper">
-        <button id="themeToggle" class="theme-toggle" aria-label="Ganti tema" aria-pressed="false">
-          <i class="fas fa-moon"></i>
-          <i class="fas fa-sun"></i>
-          <span class="theme-toggle-track"></span>
+    <!-- Top Navbar -->
+    <nav class="navbar" id="navbar">
+      <div class="navbar-inner">
+        <a href="#hero" class="navbar-brand">
+          <img src="img/totipal.png" alt="Ismail Totipal" class="navbar-avatar" />
+          <span class="navbar-name">Ismail<span class="gradient-text"> Totipal</span></span>
+        </a>
+        <ul class="navbar-links" id="navbarLinks">
+          <li><a href="#skills" class="active"><i class="fas fa-code"></i> Skills</a></li>
+          <li><a href="#projects"><i class="fas fa-folder-open"></i> Proyek</a></li>
+          <li><a href="#certifications"><i class="fas fa-certificate"></i> Sertifikasi</a></li>
+          <li class="navbar-theme-item">
+            <button id="themeToggle" class="theme-toggle" aria-label="Ganti tema" aria-pressed="false">
+              <i class="fas fa-moon"></i>
+              <i class="fas fa-sun"></i>
+              <span class="theme-toggle-track"></span>
+            </button>
+          </li>
+        </ul>
+        <button class="navbar-toggle" id="navbarToggle" aria-label="Buka menu">
+          <i class="fas fa-bars"></i>
         </button>
       </div>
-
-      <div class="sidebar-footer">
-        <p>&copy; 2024 Ismail Totipal</p>
-      </div>
     </nav>
 
-    <!-- Mobile Toggle -->
-    <button class="mobile-toggle" id="mobileToggle" aria-label="Buka menu">
-      <i class="fas fa-bars"></i>
-    </button>
-
-    <!-- Mobile Sidebar -->
-    <nav class="sidebar-mobile" id="sidebarMobile">
-      <div class="sidebar-mobile-header">
-        <img src="img/totipal.png" alt="Ismail Totipal" />
-        <h2>Ismail Totipal</h2>
-      </div>
-      <ul class="nav-links">
-        <li>
-          <a href="#hero"><i class="fas fa-home"></i> Beranda</a>
-        </li>
-        <!-- <li>
-          <a href="#profil"><i class="fas fa-user"></i> Profil</a>
-        </li>
-        <li>
-          <a href="#riwayat"
-            ><i class="fas fa-graduation-cap"></i> Pendidikan</a
-          >
-        </li>
-        <li>
-          <a href="#org"><i class="fas fa-users"></i> Organisasi</a>
-        </li> -->
-        <li>
-          <a href="#skills"><i class="fas fa-code"></i> Skills</a>
-        </li>
-        <li>
-          <a href="#projects"><i class="fas fa-folder-open"></i> Proyek</a>
-        </li>
-        <li>
-          <a href="#certifications"><i class="fas fa-certificate"></i> Sertifikasi</a>
+    <!-- Mobile Menu -->
+    <nav class="navbar-mobile" id="navbarMobile">
+      <ul class="navbar-mobile-links">
+        <li><a href="#skills"><i class="fas fa-code"></i> Skills</a></li>
+        <li><a href="#projects"><i class="fas fa-folder-open"></i> Proyek</a></li>
+        <li><a href="#certifications"><i class="fas fa-certificate"></i> Sertifikasi</a></li>
+        <li class="navbar-mobile-theme">
+          <button id="themeToggleMobile" class="theme-toggle" aria-label="Ganti tema" aria-pressed="false">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
+            <span class="theme-toggle-track"></span>
+          </button>
         </li>
       </ul>
     </nav>
 
-    <!-- Overlay -->
-    <div class="overlay" id="overlay"></div>
+    <div class="navbar-overlay" id="navbarOverlay"></div>
 
     <!-- Main Content -->
     <main class="main-content">
