@@ -1,170 +1,550 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="css/progress.css"/>
+    <title>Ismail Totipal - Developer Portfolio</title>
+    <meta
+      name="description"
+      content="Portfolio pribadi Ismail Totipal - Developer aplikasi full-stack & desktop dengan pengalaman di Laravel, PHP, Python, Golang, Rust, Svelte, PostgreSQL, MySQL, MongoDB, SQLite, Docker, Git, dan Tauri"
+    />
+    <meta
+      name="keywords"
+      content="Ismail Totipal, portfolio, developer, web developer, Laravel, PHP, Python, Golang, Rust, Svelte, PostgreSQL, MySQL, MongoDB, SQLite, Docker, Git, Tauri, desktop, Indonesia"
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
     <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x1F680;</text></svg>"
+    />
   </head>
   <body>
-    <div class="container">
-      <nav class="sidebar-mobile">
-          
-          <input class="button" type="checkbox" id="check">
-        <label for="check" class="btn-mobile"></label>
+    <!-- Sidebar Desktop -->
+    <nav class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <div class="avatar">
+          <img src="img/totipal.png" alt="Ismail Totipal" />
+          <div class="avatar-status"></div>
+        </div>
+        <h1>Ismail Totipal</h1>
+        <p class="title-dev">Developer</p>
+      </div>
+      <ul class="nav-links">
+        <li>
+          <a href="#hero" class="active"
+            ><i class="fas fa-home"></i><span>Beranda</span></a
+          >
+        </li>
+        <!-- <li>
+          <a href="#profil"
+            ><i class="fas fa-user"></i><span>Profil</span></a
+          >
+        </li>
+        <li>
+          <a href="#riwayat"
+            ><i class="fas fa-graduation-cap"></i><span>Pendidikan</span></a
+          >
+        </li>
+        <li>
+          <a href="#org"
+            ><i class="fas fa-users"></i><span>Organisasi</span></a
+          >
+        </li> -->
+        <li>
+          <a href="#skills"
+            ><i class="fas fa-code"></i><span>Skills</span></a
+          >
+        </li>
+        <li>
+          <a href="#projects"
+            ><i class="fas fa-folder-open"></i><span>Proyek</span></a
+          >
+        </li>
+        <li>
+          <a href="#certifications"
+            ><i class="fas fa-certificate"></i><span>Sertifikasi</span></a
+          >
+        </li>
+      </ul>
 
-        <div class="menu-mobile">
-          <ul>
-            <li>
-              <a href="#profil"><img src="img/icons8-admin-settings-male-96.png" alt="" /></a>
-            </li>
-            <li>
-              <a href="#riwayat"><img src="img/icons8-education-80.png" alt="" /></a>
-            </li>
-            <li>
-              <a href="#org"><img src="img/teamwork.png" alt="" /></a>
-            </li>
-            <li>
-              <a href="#skills"><img src="img/icons8-development-skill-96.png" alt="" /></a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-      <nav class="sidebar">
-        <div class="sidebar-header">
-          <img src="img/totipal.png" style="width: 120px; border-radius: 50%" alt="" />
-          <h1>Ismail Totipal</h1>
-        </div>
-        <div class="sidebar-menu">
-          <ul>
-            <li class="">
-              <a href="#profil" class="page-scroll"> <span>Profile</span></a>
-            </li>
-            <li>
-              <a href="#riwayat" class="page-scroll"><span>Riwayat Pendidikan</span></a>
-            </li>
-            <li>
-              <a href="#org" class="page-scroll"><span>Penagalaman Organisasi </span></a>
-            </li>
-            </li>
-            <li>
-              <a href="#skills" class="page-scroll"><span>Skills </span></a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+      <!-- Theme Toggle -->
+      <div class="theme-toggle-wrapper">
+        <button id="themeToggle" class="theme-toggle" aria-label="Ganti tema" aria-pressed="false">
+          <i class="fas fa-moon"></i>
+          <i class="fas fa-sun"></i>
+          <span class="theme-toggle-track"></span>
+        </button>
+      </div>
 
-      <nav class="header">
-        <!-- <div class="name">
-          <h1>Ismail totipal</h1>
-          <hr />
-          <hr />
-        </div> -->
-        <div class="sidebar-body">
-            <div class="sidebar-header-mobile">
-                <img src="img/totipal.png" style="width: 120px; border-radius: 50%" alt="" />
-                <h1>Ismail Totipal</h1>
+      <div class="sidebar-footer">
+        <p>&copy; 2024 Ismail Totipal</p>
+      </div>
+    </nav>
+
+    <!-- Mobile Toggle -->
+    <button class="mobile-toggle" id="mobileToggle" aria-label="Buka menu">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Mobile Sidebar -->
+    <nav class="sidebar-mobile" id="sidebarMobile">
+      <div class="sidebar-mobile-header">
+        <img src="img/totipal.png" alt="Ismail Totipal" />
+        <h2>Ismail Totipal</h2>
+      </div>
+      <ul class="nav-links">
+        <li>
+          <a href="#hero"><i class="fas fa-home"></i> Beranda</a>
+        </li>
+        <!-- <li>
+          <a href="#profil"><i class="fas fa-user"></i> Profil</a>
+        </li>
+        <li>
+          <a href="#riwayat"
+            ><i class="fas fa-graduation-cap"></i> Pendidikan</a
+          >
+        </li>
+        <li>
+          <a href="#org"><i class="fas fa-users"></i> Organisasi</a>
+        </li> -->
+        <li>
+          <a href="#skills"><i class="fas fa-code"></i> Skills</a>
+        </li>
+        <li>
+          <a href="#projects"><i class="fas fa-folder-open"></i> Proyek</a>
+        </li>
+        <li>
+          <a href="#certifications"><i class="fas fa-certificate"></i> Sertifikasi</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- HERO -->
+      <section id="hero" class="hero">
+        <div class="particles" id="particles"></div>
+        <div class="hero-content">
+          <div class="hero-badge">Developer Aplikasi</div>
+          <h1 class="hero-title">
+            Halo, saya <span class="gradient-text">Ismail Totipal</span>
+          </h1>
+          <p class="hero-subtitle">
+            Saya seorang <span class="typing-text" id="typingText"></span>
+          </p>
+          <p class="hero-description">
+            Developer aplikasi full-stack & desktop dengan pengalaman di
+            Laravel, PHP, Python, Golang, Rust, Svelte, PostgreSQL, MySQL,
+            MongoDB, SQLite, Docker, Git, dan Tauri.
+          </p>
+          <div class="hero-actions">
+            <a href="#profil" class="btn btn-primary">
+              <i class="fas fa-user"></i> Lihat Profil
+            </a>
+            <a href="#skills" class="btn btn-secondary">
+              <i class="fas fa-code"></i> Skills
+            </a>
+          </div>
+          <div class="hero-social">
+            <a href="https://github.com/totipal128" target="_blank" rel="noopener" class="social-link" aria-label="GitHub"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a href="https://www.linkedin.com/in/ismail-totipal-197918144/" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <a href="#" class="social-link" aria-label="Email"
+              ><i class="fas fa-envelope"></i
+            ></a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="code-window">
+            <div class="code-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+              <span class="code-filename">developer.js</span>
+            </div>
+            <div class="code-body">
+              <pre><code><span class="kw">const</span> <span class="v">developer</span> = {
+  <span class="p">name</span>: <span class="s">"Ismail Totipal"</span>,
+  <span class="p">role</span>: <span class="s">"Developer"</span>,
+  <span class="p">skills</span>: [<span class="s">"Laravel"</span>, <span class="s">"PHP"</span>, <span class="s">"Python"</span>, <span class="s">"Golang"</span>, <span class="s">"Rust"</span>, <span class="s">"Svelte"</span>],
+  <span class="p">databases</span>: [<span class="s">"PostgreSQL"</span>, <span class="s">"MySQL"</span>, <span class="s">"MongoDB"</span>, <span class="s">"SQLite"</span>],
+  <span class="p">tools</span>: [<span class="s">"Docker"</span>, <span class="s">"Git"</span>],
+  <span class="p">desktop</span>: [<span class="s">"Rust"</span>, <span class="s">"Tauri"</span>, <span class="s">"Svelte"</span>],
+  <span class="p">status</span>: <span class="s">"Available"</span>
+};</code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROFILE -->
+      <!-- <section id="profil" class="section">
+        <div class="section-header reveal">
+          <h2><i class="fas fa-user"></i> Profile</h2>
+          <div class="section-line"></div>
+        </div>
+        <div class="profile-card reveal">
+          <div class="profile-grid">
+            <div class="profile-item">
+              <span class="profile-label"
+                ><i class="fas fa-user-tag"></i> Nama Lengkap</span
+              >
+              <span class="profile-value">Ismail Totipal</span>
+            </div>
+            <div class="profile-item">
+              <span class="profile-label"
+                ><i class="fas fa-map-marker-alt"></i> Alamat</span
+              >
+              <span class="profile-value">Jl. Bulu Pakoro</span>
+            </div>
+            <div class="profile-item">
+              <span class="profile-label"
+                ><i class="fas fa-venus-mars"></i> Jenis Kelamin</span
+              >
+              <span class="profile-value">Laki-laki</span>
+            </div>
+            <div class="profile-item">
+              <span class="profile-label"
+                ><i class="fas fa-mosque"></i> Agama</span
+              >
+              <span class="profile-value">Islam</span>
+            </div>
+            <div class="profile-item">
+              <span class="profile-label"
+                ><i class="fas fa-flag"></i> Kewarganegaraan</span
+              >
+              <span class="profile-value">Indonesia</span>
+            </div>
+          </div>
+        </div>
+      </section> -->
+
+      <!-- EDUCATION -->
+      <!-- <section id="riwayat" class="section">
+        <div class="section-header reveal">
+          <h2><i class="fas fa-graduation-cap"></i> Riwayat Pendidikan</h2>
+          <div class="section-line"></div>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item reveal">
+            <div class="timeline-icon"><i class="fas fa-university"></i></div>
+            <div class="timeline-content">
+              <div class="timeline-year">2016 — 2020</div>
+              <h3>Universitas Dipa Makassar</h3>
+              <p>Strata 1</p>
+            </div>
+          </div>
+          <div class="timeline-item reveal">
+            <div class="timeline-icon"><i class="fas fa-school"></i></div>
+            <div class="timeline-content">
+              <div class="timeline-year">2013 — 2016</div>
+              <h3>SMK Negeri 1 Pinrang</h3>
+              <p>Sekolah Menengah Kejuruan</p>
+            </div>
+          </div>
+          <div class="timeline-item reveal">
+            <div class="timeline-icon"><i class="fas fa-school"></i></div>
+            <div class="timeline-content">
+              <div class="timeline-year">2010 — 2013</div>
+              <h3>SMP Negeri 2 Pinrang</h3>
+              <p>Sekolah Menengah Pertama</p>
+            </div>
+          </div>
+        </div>
+      </section> -->
+
+      <!-- ORGANIZATION -->
+      <!-- <section id="org" class="section">
+        <div class="section-header reveal">
+          <h2><i class="fas fa-users"></i> Pengalaman Organisasi</h2>
+          <div class="section-line"></div>
+        </div>
+        <div class="org-grid">
+          <div class="org-card reveal">
+            <div class="org-icon"><i class="fas fa-network-wired"></i></div>
+            <div class="org-badge">2017 — 2018</div>
+            <h3>Koordinator Divisi Jaringan</h3>
+            <p>DIMENSI</p>
+          </div>
+          <div class="org-card reveal">
+            <div class="org-icon">
+              <i class="fas fa-chalkboard-teacher"></i>
+            </div>
+            <div class="org-badge">2018 — 2019</div>
+            <h3>Ketua Departemen Pembelajaran</h3>
+            <p>DIMENSI</p>
+          </div>
+          <div class="org-card reveal">
+            <div class="org-icon"><i class="fas fa-handshake"></i></div>
+            <div class="org-badge">2019 — 2020</div>
+            <h3>Ketua Umum</h3>
+            <p>KMP STMIK Dipanegara Makassar</p>
+          </div>
+        </div>
+      </section> -->
+
+      <!-- PROJECTS -->
+      <section id="projects" class="section">
+        <div class="section-header reveal">
+          <h2><i class="fas fa-folder-open"></i> Project Portfolio</h2>
+          <div class="section-line"></div>
+        </div>
+        <div class="projects-grid" id="projectsGrid">
+          <!-- Cards akan di-generate oleh JS -->
+        </div>
+      </section>
+
+      <!-- CERTIFICATIONS -->
+      <section id="certifications" class="section">
+        <div class="section-header reveal">
+          <h2><i class="fas fa-certificate"></i> Sertifikasi & Course</h2>
+          <div class="section-line"></div>
+        </div>
+        <div class="cert-grid">
+
+          <div class="cert-card reveal">
+            <div class="cert-icon" style="background: linear-gradient(135deg, #2c3e50, #3498db);">
+              <i class="fas fa-code"></i>
+            </div>
+            <div class="cert-body">
+              <div class="cert-meta">
+                <span class="cert-badge dicoding">Dicoding</span>
+                <span class="cert-year">2023</span>
               </div>
-          <div class="profil" id="profil">
-            <h2>Profile</h2>
-            <span>
-              <table>
-                <tr>
-                  <td>Nama Lengkap</td>
-                  <td>:</td>
-                  <td>Ismail Totipal</td>
-                </tr>
-                <tr>
-                  <td>Alamat</td>
-                  <td>:</td>
-                  <td>Jl. Bulu Pakoro</td>
-                  <br />
-                </tr>
-                <tr>
-                  <td>Jenis Kelamin</td>
-                  <td>:</td>
-                  <td>Laki-laki</td>
-                </tr>
-                <tr>
-                  <td>Agama</td>
-                  <td>:</td>
-                  <td>Islam</td>
-                </tr>
-                <tr>
-                  <td>Kewarganegaraan</td>
-                  <td>:</td>
-                  <td>Indonesia</td>
-                </tr>
-              </table>
-            </span>
+              <h3>Belajar Dasar Pemrograman Web</h3>
+              <p>HTML, CSS, JavaScript fundamentals — membangun halaman web responsif dari awal</p>
+              <div class="cert-tags">
+                <span class="cert-tag">HTML5</span>
+                <span class="cert-tag">CSS3</span>
+                <span class="cert-tag">JavaScript</span>
+              </div>
+            </div>
           </div>
 
-          <div class="profil" id="riwayat">
-            <h2>Riwayat Pendidikan</h2>
-            <table>
-              <tr>
-                <td>2016-2020</td>
-                <td></td>
-                <td>Universitas Dipa Makassar</td>
-              </tr>
-              <tr>
-                <td>2013-2016</td>
-                <td></td>
-                <td>SMK Negeri 1 Pinrang</td>
-              </tr>
-              <tr>
-                <td>2010-2013</td>
-                <td></td>
-                <td>SMP Negeri 2 Pinrang</td>
-              </tr>
-            </table>
+          <div class="cert-card reveal">
+            <div class="cert-icon" style="background: linear-gradient(135deg, #ff2d20, #cc2211);">
+              <i class="fab fa-laravel"></i>
+            </div>
+            <div class="cert-body">
+              <div class="cert-meta">
+                <span class="cert-badge dicoding">Dicoding</span>
+                <span class="cert-year">2023</span>
+              </div>
+              <h3>Belajar Membangun Aplikasi Web dengan Laravel</h3>
+              <p>Fundamental Laravel: routing, Eloquent ORM, Blade templating, autentikasi, dan REST API</p>
+              <div class="cert-tags">
+                <span class="cert-tag">Laravel</span>
+                <span class="cert-tag">PHP</span>
+                <span class="cert-tag">MySQL</span>
+              </div>
+            </div>
           </div>
-          <div class="profil" id="org">
-            <h2>Pengalaman Organisasi</h2>
-            <span>
-              <table>
-                <tr>
-                  <td>2017-2018</td>
-                  <td>Koord Div Jaringan DIMENSI</td>
-                </tr>
-                <tr>
-                  <td>2018-2019</td>
-                  <td>Ketua Departemen Pembelajaran DIMENSI</td>
-                </tr>
-                <tr>
-                  <td>2019-2020</td>
-                  <td>Ketua Umum KMP STMIK Dipanegara Makassar</td>
-                </tr>
-              </table>
-            </span>
+
+          <div class="cert-card reveal">
+            <div class="cert-icon" style="background: linear-gradient(135deg, #3776ab, #2d5a87);">
+              <i class="fab fa-python"></i>
+            </div>
+            <div class="cert-body">
+              <div class="cert-meta">
+                <span class="cert-badge udemy">Udemy</span>
+                <span class="cert-year">2024</span>
+              </div>
+              <h3>Python untuk Data Science & Machine Learning</h3>
+              <p>NumPy, Pandas, Scikit-learn, visualisasi data, dan pipeline ML end-to-end</p>
+              <div class="cert-tags">
+                <span class="cert-tag">Python</span>
+                <span class="cert-tag">ML</span>
+                <span class="cert-tag">Pandas</span>
+              </div>
+            </div>
           </div>
-          <div class="profil skills" id="skills">
-            <h2>Skills</h2>
-              <li>
-                  <h3>HTML 5</h3>
-                  <span class="bar"><span class="html"></span></span>
-              </li>
-              <li>
-                <h3>PHP</h3>
-                <span class="bar"><span class="php"></span></span>
-            </li>
-            <li>
-                <h3>JavaScript</h3>
-                <span class="bar"><span class="javascript"></span></span>
-            </li>
-            <li>
-                <h3>React Js</h3>
-                <span class="bar"><span class="react"></span></span>
-            </li>
+
+          <div class="cert-card reveal">
+            <div class="cert-icon" style="background: linear-gradient(135deg, #dea584, #b8714a);">
+              <i class="fas fa-cog"></i>
+            </div>
+            <div class="cert-body">
+              <div class="cert-meta">
+                <span class="cert-badge udemy">Udemy</span>
+                <span class="cert-year">2024</span>
+              </div>
+              <h3>Rust Programming — The Complete Course</h3>
+              <p>Ownership, borrowing, lifetimes, concurrency, dan CLI tooling dengan Rust</p>
+              <div class="cert-tags">
+                <span class="cert-tag">Rust</span>
+                <span class="cert-tag">CLI</span>
+                <span class="cert-tag">Concurrency</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="cert-card reveal">
+            <div class="cert-icon" style="background: linear-gradient(135deg, #00add8, #008bb0);">
+              <i class="fab fa-golang"></i>
+            </div>
+            <div class="cert-body">
+              <div class="cert-meta">
+                <span class="cert-badge coursera">Coursera</span>
+                <span class="cert-year">2024</span>
+              </div>
+              <h3>Golang: Microservices & API Development</h3>
+              <p>Arsitektur microservices, REST API, concurrency patterns, dan testing dengan Go</p>
+              <div class="cert-tags">
+                <span class="cert-tag">Golang</span>
+                <span class="cert-tag">API</span>
+                <span class="cert-tag">Microservices</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="cert-card reveal">
+            <div class="cert-icon" style="background: linear-gradient(135deg, #ff3e00, #cc3200);">
+              <i class="fas fa-bolt"></i>
+            </div>
+            <div class="cert-body">
+              <div class="cert-meta">
+                <span class="cert-badge udemy">Udemy</span>
+                <span class="cert-year">2024</span>
+              </div>
+              <h3>Svelte & SvelteKit — The Complete Guide</h3>
+              <p>Reactive components, stores, SSR dengan SvelteKit, dan deployment</p>
+              <div class="cert-tags">
+                <span class="cert-tag">Svelte</span>
+                <span class="cert-tag">SvelteKit</span>
+                <span class="cert-tag">TypeScript</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="cert-card reveal">
+            <div class="cert-icon" style="background: linear-gradient(135deg, #ffd700, #d4a800);">
+              <i class="fas fa-laptop-code"></i>
+            </div>
+            <div class="cert-body">
+              <div class="cert-meta">
+                <span class="cert-badge dicoding">Dicoding</span>
+                <span class="cert-year">2025</span>
+              </div>
+              <h3>Belajar Membangun Aplikasi Desktop dengan Tauri</h3>
+              <p>Aplikasi desktop lintas platform dengan Rust + Tauri + Svelte, SQLite, dan sistem file native</p>
+              <div class="cert-tags">
+                <span class="cert-tag">Rust</span>
+                <span class="cert-tag">Tauri</span>
+                <span class="cert-tag">Svelte</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section id="skills" class="section">
+        <div class="section-header reveal">
+          <h2><i class="fas fa-code"></i> Skills</h2>
+          <div class="section-line"></div>
+        </div>
+        <div class="skills-container">
+
+          <p class="skills-subtitle reveal">
+            <i class="fas fa-terminal"></i> Teknologi yang saya gunakan
+          </p>
+
+          <div class="skills-group reveal">
+            <h3 class="skills-group-title"><i class="fas fa-globe"></i> Web & Backend</h3>
+            <div class="skills-chips">
+              <span class="skill-chip"><i class="fab fa-laravel" style="color:#ff2d20"></i> Laravel</span>
+              <span class="skill-chip"><i class="fab fa-php" style="color:#777bb4"></i> PHP</span>
+              <span class="skill-chip"><i class="fab fa-python" style="color:#3776ab"></i> Python</span>
+              <span class="skill-chip"><i class="fab fa-golang" style="color:#00add8"></i> Golang</span>
+              <span class="skill-chip"><i class="fas fa-cog" style="color:#dea584"></i> Rust</span>
+              <span class="skill-chip"><i class="fas fa-bolt" style="color:#ff3e00"></i> Svelte</span>
+              <span class="skill-chip"><i class="fas fa-laptop-code" style="color:#ffd700"></i> Desktop (Tauri + Svelte)</span>
+            </div>
+          </div>
+
+          <div class="skills-group reveal">
+            <h3 class="skills-group-title"><i class="fas fa-database"></i> Database</h3>
+            <div class="skills-chips">
+              <span class="skill-chip"><i class="fas fa-database" style="color:#336791"></i> PostgreSQL</span>
+              <span class="skill-chip"><i class="fas fa-database" style="color:#4479a1"></i> MySQL</span>
+              <span class="skill-chip"><i class="fas fa-leaf" style="color:#47A248"></i> MongoDB</span>
+              <span class="skill-chip"><i class="fas fa-database" style="color:#003B57"></i> SQLite</span>
+            </div>
+          </div>
+
+          <div class="skills-group reveal">
+            <h3 class="skills-group-title"><i class="fas fa-tools"></i> Tools & Platforms</h3>
+            <div class="skills-chips">
+              <span class="skill-chip"><i class="fab fa-docker" style="color:#2496ed"></i> Docker</span>
+              <span class="skill-chip"><i class="fab fa-git-alt" style="color:#f05032"></i> Git</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- PROJECT MODAL -->
+      <div class="project-modal" id="projectModal" role="dialog" aria-modal="true" aria-label="Detail Project">
+        <div class="modal-backdrop" id="modalBackdrop"></div>
+        <div class="modal-content">
+          <button class="modal-close" id="modalClose" aria-label="Tutup">
+            <i class="fas fa-times"></i>
+          </button>
+          <div class="modal-header">
+            <div class="modal-icon" id="modalIcon"></div>
+            <div>
+              <h3 id="modalTitle"></h3>
+              <div class="modal-tech" id="modalTech"></div>
+            </div>
+          </div>
+          <div class="modal-body">
+            <p id="modalDescription"></p>
+            <div class="modal-features" id="modalFeatures"></div>
+          </div>
+          <div class="modal-footer">
+            <a href="#" class="btn btn-primary" id="modalDemoLink" target="_blank" rel="noopener">
+              <i class="fas fa-external-link-alt"></i> Live Demo
+            </a>
+            <a href="#" class="btn btn-secondary" id="modalGithubLink" target="_blank" rel="noopener">
+              <i class="fab fa-github"></i> Source Code
+            </a>
           </div>
         </div>
-      </nav>
-    </div>
+      </div>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+      <!-- FOOTER -->
+      <footer class="footer">
+        <p>
+          &copy; 2026 Ismail Totipal &mdash; Dibuat dengan
+          <i class="fas fa-heart"></i> dan <i class="fas fa-mug-hot"></i>
+        </p>
+      </footer>
+    </main>
+
     <script src="js/js.js"></script>
-    
   </body>
 </html>
