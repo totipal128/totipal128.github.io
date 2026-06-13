@@ -749,6 +749,7 @@ img {
 .section {
   padding: 5rem 4rem;
   max-width: 900px;
+  margin: 0 auto;
 }
 
 .section-header {
